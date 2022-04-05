@@ -1,0 +1,32 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        /* start section added by me */
+        jcenter()   // to resolve resolve com.android.volley:volley:1.1.1.
+                    //  Required by:
+                    //project :app > com.microsoft.azure:notification-hubs-android-sdk-fcm:1.1.4
+         maven {
+            url "https://dl.bintray.com/microsoftazuremobile/SDK"
+        }
+        /* end section added by me */
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        /* start section added by me */
+        jcenter()   // to resolve resolve com.android.volley:volley:1.1.1.
+                    //  Required by:
+                    //project :app > com.microsoft.azure:notification-hubs-android-sdk-fcm:1.1.4
+        maven {
+            url "https://dl.bintray.com/microsoftazuremobile/SDK"
+        }
+        /* end section added by me */
+    }
+}
+rootProject.name = "NotificationPoC"
+include ':app'
